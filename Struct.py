@@ -16,20 +16,21 @@ class Struct:
                 temp = temp.suivant
             temp.suivant = Maillon(personne, temp, None)
 
+
     def Afficher(self):
         ptr = self.tete
         while ptr != None:
-            print("Nom: " + ptr.p.nom)
+            print("Nom: " + str(ptr.p.id))
             if ptr.precedent != None:
-                print("Précédent: " + ptr.precedent.p.nom)
+                print("Précédent: " + str(ptr.precedent.p.id))
             else:
                 print("Précédent: NONE")
             if ptr.suivant != None:
-                print("Suivant: " + ptr.suivant.p.nom)
+                print("Suivant: " + str(ptr.suivant.p.id))
             else:
                 print("Suivant: NONE")
             print("Voisins: ")
             for i in range(len(ptr.voisins)):
-                print(ptr.voisins[i].nom)
+                print(ptr.voisins[i].id)
             print("----------------------------------------")
             ptr = ptr.suivant
