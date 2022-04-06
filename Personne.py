@@ -48,11 +48,8 @@ class Personne:
 
         for i in range(len(self.metriques)):
             poidsTotal += self.metriques[i].poids
-            # print("Je compare " + str(self.metriques[i].valeur) + " et " + str(p.metriques[i].valeur))
             if self.metriques[i].valeur == p.metriques[i].valeur:
                 tauxCompatibilite += self.metriques[i].poids
-
-        # print(tauxCompatibilite)
 
         return (tauxCompatibilite / poidsTotal)
 

@@ -1,14 +1,15 @@
 import os
 import numpy as np
 import pandas
-from Graphe import Graphe
 from Maillon import Maillon
+from Graphe import Graphe
 from Metrique import Metrique
 from Personne import Personne
 from Struct import Struct
 
 def main():
     
+    # entry point
     dataset = pandas.read_csv("dataset.csv")
 
     # normalisation des données
@@ -69,9 +70,9 @@ def main():
         tabMetriques = []
         for j in range(len(dataset.columns.values.tolist())): # pour chaque colonne
             m = Metrique(
-                dataset.columns.values.tolist()[j], 
-                dataset[dataset.columns.values.tolist()[j]].iloc[i], 
-                dataset[dataset.columns.values.tolist()[j]].iloc[-1]
+                dataset.columns.values.tolist()[j], # nom
+                dataset[dataset.columns.values.tolist()[j]].iloc[i], # valeur
+                dataset[dataset.columns.values.tolist()[j]].iloc[-1]  # poids
             )
             tabMetriques.append(m)
 
@@ -110,9 +111,40 @@ def main():
         ptr = ptr.suivant
 
     
-    # colorer le graphe d'interaction (DSATUR algorithme)
+    # colorer le graphe d'interaction
+
+    # test unitaire avec une matrice 3x3
+    a = [
+        [0, 0, 1],
+        [0, 0, 1],
+        [1, 1, 0]
+    ]
+
+    colorationA = {2: 1, 0: 2, 1: 2}
+
+    A = Graphe(a)
     
-    couleurInit = 0
+    if A.Coloration() == colorationA:
+        print("Coloration de A - success")
+    else:
+        print("Coloration de A - failed")
+    
+
+    # création des clusters à partir de la coloration
+    g = G.Coloration()
+
+    clusters = []
+
+    for couleur in list(set(g.values())):
+        # on itère pour chaque couleur différente de la coloration
+        clusters.append([k for k,v in g.items() if v == couleur])
+    
+    ptr = struct.tete
+
+    for i in range(len(clusters)):
+        print("Cluster " + str(i) + ": " + str(clusters[i]))
+
+
 
 if __name__ == "__main__":
     main()
