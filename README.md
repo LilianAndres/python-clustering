@@ -38,7 +38,7 @@ We created a survey with several questions and predefined answers that we submit
 
 * [![Gitlab][Gitlab]][Gitlab-url]
 * [![Python][Python]][Python-url]
-
+* [![Pandas][Pandas]][Pandas-url]
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -88,3 +88,5 @@ Project Link: [https://github.com/LilianAndres/python-clustering](https://github
 [Gitlab-url]: https://about.gitlab.com
 [Python]: https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54
 [Python-url]: https://www.python.org
+[Pandas]: https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white
+[Pandas-url]: https://pandas.pydata.org
