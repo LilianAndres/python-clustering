@@ -31,6 +31,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
+We created a survey with several questions and predefined answers that we submitted to a group of several individuals. These responses provided us with our initial dataset that would serve as the basis for the algorithms. This data was processed and ranked in order of importance and impact. We then developed several algorithms to optimise the data processing by implementing a LIFO model. The data was extracted and placed in this stack, which was traversed by another algorithm. We then set up the adjacency matrix to highlight the individuals that were not compatible with each other (compatibility score calculated beforehand). Thanks to this matrix, we were able to colour a graph and thus create clusters. The most compatible individuals were found in the same cluster.
 
 
 ### Built With
@@ -51,9 +52,9 @@ To get a local copy up and running follow these simple example steps.
    git clone https://github.com/LilianAndres/python-clustering.git
    ```
 2. Run the script from the root of the project
-```sh 
-python 
-```
+  ```sh 
+  python main.py
+  ```
 
 
 <!-- LICENSE -->
